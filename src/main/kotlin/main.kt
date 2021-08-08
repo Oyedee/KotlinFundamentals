@@ -1,3 +1,5 @@
+import java.util.*
+
 fun main() {
     println("Hello World")
 
@@ -37,6 +39,27 @@ fun main() {
     }
     println("Number is $number")
 
+    //Kotlin Looping Constructs
+    //while and for loops
+    //for loop using the concepts of a range
+    for(i in 10 downTo 1) {}
+    for(i in 1 until 10) {}
+
+    val numbers = listOf<Int>(1,2,3,4,5,6)
+
+    var ages = TreeMap<String, Int>()
+    ages["kelvin"] = 55
+    ages["Sam"] =34
+    ages["hamid"] = 28
+    ages["qidos"] = 29
+    //print name and age in the list
+    for((name, age) in ages) {
+        println("$name is $age")
+    }
+    //print the index and element of the list
+    for ((index, element) in numbers.withIndex()) {
+        println("$element at $index")
+    }
 }
 
 
