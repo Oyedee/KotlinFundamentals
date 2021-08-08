@@ -1,3 +1,5 @@
+import java.io.FileReader
+import java.io.IOException
 import java.util.*
 
 fun main() {
@@ -59,6 +61,16 @@ fun main() {
     //print the index and element of the list
     for ((index, element) in numbers.withIndex()) {
         println("$element at $index")
+    }
+
+    //Kotlin support for Exceptions
+    var reader = FileReader("filename")
+    try {
+        reader.read()
+    } catch (e :IOException) {
+
+    }finally {
+
     }
 }
 
