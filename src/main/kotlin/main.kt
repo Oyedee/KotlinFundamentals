@@ -25,6 +25,9 @@ fun main() {
     // you can also make object "q" a nullable type by adding a "?" to the end object type
     //change "q" to "p"
     val p:Question? = Question()
+
+    //using a When statement in Kotlin
+    p?.printResult()
 }
 
 
@@ -35,6 +38,15 @@ class Question {
     val question: String = "What is the answer to life, the universe and everything?"
 
     fun display() {
-        println("You said $answer")
+        println(" You said $answer")
+    }
+
+    fun printResult() {
+        when (answer) {
+            correctAnswer ->
+                println("You are correct")
+            else ->
+                println("you're wrong")
+        }
     }
 }
