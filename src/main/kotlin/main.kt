@@ -28,6 +28,15 @@ fun main() {
 
     //using a When statement in Kotlin
     p?.printResult()
+
+    // using "try" and "catch" in kotlin
+    val number: Int? = try {
+        Integer.parseInt(q.answer)
+    } catch (e:NumberFormatException) {
+        null
+    }
+    println("Number is $number")
+
 }
 
 
